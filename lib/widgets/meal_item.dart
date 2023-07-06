@@ -41,6 +41,7 @@ class MealItem extends StatelessWidget {
         },
         child: Stack(
           children: [
+            //Image.network(url) can also be used here
             FadeInImage(
               placeholder: MemoryImage(kTransparentImage),
               image: NetworkImage(
