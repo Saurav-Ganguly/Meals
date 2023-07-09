@@ -9,11 +9,13 @@ class CategoriesScreen extends StatelessWidget {
   const CategoriesScreen({
     super.key,
     required this.onToggleFavorite,
+    required this.avilableMeals,
   });
   final void Function(Meal meal) onToggleFavorite;
+  final List<Meal> avilableMeals;
   //here state is not updated however Navigation is used
   void _selectCategory(BuildContext context, Category category) {
-    final filteredMeals = dummyMeals
+    final filteredMeals = avilableMeals
         .where(
           (meal) => meal.categories.contains(category.id),
         )
